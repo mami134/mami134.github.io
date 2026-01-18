@@ -9,87 +9,64 @@
 body{
     margin:0;
     font-family:Arial, sans-serif;
-    background:radial-gradient(circle at top, #1a0000, #050000);
+    background:#0b0b0b;
     color:#fff;
 }
 
 header{
-    padding:40px 20px;
+    background:#7f0000;
+    padding:30px 20px;
     text-align:center;
 }
 
 .logo{
-    width:180px;
-    filter:drop-shadow(0 0 25px #ff0000);
-    margin-bottom:15px;
+    width:140px;
+    display:block;
+    margin:0 auto 10px;
 }
 
 header h1{
     margin:0;
-    font-size:40px;
-    letter-spacing:3px;
     color:#ff2e2e;
-}
-
-header p{
-    margin-top:8px;
-    opacity:.8;
+    font-size:36px;
 }
 
 main{
-    max-width:1000px;
+    max-width:900px;
     margin:auto;
     padding:40px 20px;
 }
 
 .menu{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:30px;
+    display:flex;
+    gap:20px;
 }
 
 .box{
-    background:linear-gradient(145deg,#140000,#0a0000);
-    border-radius:22px;
-    padding:60px 25px;
+    flex:1;
+    background:#141414;
+    padding:50px 20px;
+    border-radius:18px;
     text-align:center;
     cursor:pointer;
-    transition:.35s;
-    position:relative;
-    overflow:hidden;
-    border:2px solid #220000;
-}
-
-.box::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(120deg,transparent,#ff2e2e,transparent);
-    opacity:.08;
+    transition:.3s;
+    border:2px solid #1f1f1f;
 }
 
 .box:hover{
-    transform:translateY(-6px) scale(1.03);
     border-color:#ff2e2e;
-    box-shadow:0 0 40px #ff000040;
+    transform:scale(1.05);
 }
 
 .box h2{
-    font-size:30px;
     color:#ff4c4c;
-    margin-bottom:10px;
-}
-
-.box p{
-    opacity:.8;
-    font-size:15px;
+    font-size:28px;
 }
 
 footer{
     text-align:center;
-    padding:25px;
-    opacity:.5;
-    font-size:14px;
+    opacity:.6;
+    padding:20px;
 }
 </style>
 </head>
@@ -97,28 +74,25 @@ footer{
 <body>
 
 <header>
-    <img src="./logo.png" class="logo" alt="DevilNW Logo">
+    <img src="logo.png" class="logo" alt="DevilNW Logo">
     <h1>DEVILNW</h1>
-    <p>Minecraft Sunucu Satış Merkezi</p>
 </header>
 
 <main>
     <div class="menu">
         <div class="box" onclick="location.href='vip.html'">
             <h2>VIP’ler</h2>
-            <p>Özel yetkiler • Güç • Ayrıcalık</p>
+            <p>Sunucu VIP paketleri</p>
         </div>
 
         <div class="box" onclick="location.href='esyalar.html'">
             <h2>Diğer Eşyalar</h2>
-            <p>Kasa anahtarı • Item • Özel ürünler</p>
+            <p>Kasa anahtarı & özel itemler</p>
         </div>
     </div>
 </main>
 
-<footer>
-    © DevilNW • Tüm Hakları Saklıdır
-</footer>
+<footer>© DevilNW</footer>
 
 </body>
 </html>
