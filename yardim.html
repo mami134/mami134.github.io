@@ -6,25 +6,45 @@
     <title>Yardım | DevilNW</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', sans-serif; background: #0e0f13; color: #fff; }
+        
+        /* Arka planı kırmızımsı siyah karışımı ve daha derin yaptık */
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: radial-gradient(circle at center, #1a0505 0%, #0e0f13 100%);
+            background-attachment: fixed;
+            color: #fff; 
+            min-height: 100vh;
+        }
         
         nav {
-            background: rgba(20, 20, 25, 0.9);
+            background: rgba(15, 15, 20, 0.8);
             backdrop-filter: blur(10px);
             padding: 15px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #1c1e26;
+            border-bottom: 1px solid rgba(255, 59, 59, 0.1);
         }
         .nav-logo { font-weight: bold; font-size: 22px; color: #ff3b3b; text-decoration: none; }
         .menu a { color: #cfd3ff; text-decoration: none; margin-left: 20px; font-weight: 500; transition: 0.3s; }
         .menu a:hover { color: #ff3b3b; }
 
         .container { max-width: 900px; margin: auto; padding: 80px 20px; }
-        h1 { text-align: center; color: #ff3b3b; margin-bottom: 40px; }
+        h1 { text-align: center; color: #ff3b3b; margin-bottom: 40px; text-shadow: 0 0 15px rgba(255, 59, 59, 0.3); }
 
-        .help-card { background: #161821; padding: 25px; border-radius: 12px; margin-bottom: 20px; border: 1px solid #1c1e26; }
+        /* Kartların daha şık durması için hafif transparanlık ekledik */
+        .help-card { 
+            background: rgba(22, 24, 33, 0.8); 
+            padding: 25px; 
+            border-radius: 12px; 
+            margin-bottom: 20px; 
+            border: 1px solid rgba(255, 59, 59, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .help-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 59, 59, 0.4);
+        }
         .help-card h3 { color: #ff3b3b; margin-bottom: 10px; }
         .help-card p { color: #cfd3ff; }
 
@@ -34,12 +54,12 @@
 <body>
 
 <nav>
+    <a href="#" class="nav-logo">DevilNW</a>
     <div class="menu">
         <a href="index.html">Ana Sayfa</a>
         <a href="magaza.html">Mağaza</a>
         <a href="kurallar.html">Kurallar</a>
     </div>
-</nav>
 </nav>
 
 <div class="container">
