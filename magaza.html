@@ -5,37 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mağaza | DevilNW</title>
     <style>
-        /* Ana sayfadaki stillerin aynısı (Uyum için) */
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', sans-serif; background: #0e0f13; color: #fff; }
+        
+        /* Arka planı kırmızımsı siyah dairesel geçişli yaptık */
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: radial-gradient(circle at center, #1a0505 0%, #0e0f13 100%);
+            background-attachment: fixed;
+            color: #fff; 
+            min-height: 100vh;
+        }
         
         nav {
-            background: rgba(20, 20, 25, 0.9);
+            background: rgba(15, 15, 20, 0.8);
             backdrop-filter: blur(10px);
             padding: 15px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #1c1e26;
+            border-bottom: 1px solid rgba(255, 59, 59, 0.1);
         }
-        .nav-logo { font-weight: bold; font-size: 22px; color: #ff3b3b; }
+        .nav-logo { font-weight: bold; font-size: 22px; color: #ff3b3b; text-decoration: none; }
         .menu a { color: #cfd3ff; text-decoration: none; margin-left: 20px; font-weight: 500; transition: 0.3s; }
         .menu a:hover { color: #ff3b3b; }
 
         .container { max-width: 1100px; margin: auto; padding: 60px 20px; }
-        h1 { text-align: center; color: #ff3b3b; margin-bottom: 40px; }
+        h1 { text-align: center; color: #ff3b3b; margin-bottom: 40px; text-shadow: 0 0 15px rgba(255, 59, 59, 0.3); }
 
-        /* MAĞAZA KARTLARI */
+        /* MAĞAZA KARTLARI - Daha şık ve uyumlu hale getirildi */
         .shop-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        
         .item-card { 
-            background: #161821; 
-            padding: 20px; 
+            background: rgba(22, 24, 33, 0.8); 
+            padding: 25px; 
             border-radius: 15px; 
             text-align: center; 
-            border: 1px solid #1c1e26;
-            transition: 0.3s;
+            border: 1px solid rgba(255, 59, 59, 0.1);
+            transition: 0.3s ease;
+            backdrop-filter: blur(5px);
         }
-        .item-card:hover { transform: translateY(-5px); border-color: #ff3b3b; }
+        
+        .item-card:hover { 
+            transform: translateY(-8px); 
+            border-color: #ff3b3b; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+        
         .item-card h3 { color: #ff3b3b; margin: 15px 0; }
         .price { font-size: 24px; font-weight: bold; margin-bottom: 20px; display: block; }
         
@@ -44,10 +59,16 @@
             text-decoration: none;
             background: #ff3b3b; 
             color: #fff; 
-            padding: 10px 20px; 
+            padding: 12px 20px; 
             border-radius: 8px; 
             font-weight: bold;
             width: 100%;
+            transition: 0.3s;
+        }
+
+        .btn-buy:hover {
+            background: #d32f2f;
+            box-shadow: 0 0 15px rgba(255, 59, 59, 0.4);
         }
 
         footer { text-align: center; padding: 40px; opacity: 0.5; font-size: 14px; }
@@ -56,6 +77,7 @@
 <body>
 
 <nav>
+    <a href="index.html" class="nav-logo">DevilNW</a>
     <div class="menu">
         <a href="index.html">Ana Sayfa</a>
         <a href="yardim.html">Yardım</a>
@@ -71,17 +93,16 @@
             <img src="https://cdn-icons-png.flaticon.com/512/179/179249.png" width="80" alt="VIP">
             <h3>Vipler</h3>
             <span class="price"></span>
-            <p style="margin-bottom: 15px; font-size: 14px; color: #aaa;">Vip,Mvip,Mvip+,Tvip</p>
-            <a href="vipler.html" class="btn-buy">Satın Al</a>
+            <p style="margin-bottom: 15px; font-size: 14px; color: #cfd3ff;">Vip, Mvip, Mvip+, Tvip</p>
+            <a href="vipler.html" class="btn-buy">İncele</a>
         </div>
-
 
         <div class="item-card">
             <img src="https://images.icon-icons.com/514/PNG/512/coin-us-dollar_icon-icons.com_51029.png" width="80" alt="Spawners">
-            <h3>Diğer Eşyalar </h3>
+            <h3>Diğer Eşyalar</h3>
             <span class="price"></span>
-            <p style="margin-bottom: 15px; font-size: 14px; color: #aaa;">Anahtar Para vb.</p>
-            <a href="esyalar.html" class="btn-buy">Satın Al</a>
+            <p style="margin-bottom: 15px; font-size: 14px; color: #cfd3ff;">Anahtar, Para vb.</p>
+            <a href="esyalar.html" class="btn-buy">İncele</a>
         </div>
     </div>
 </div>
